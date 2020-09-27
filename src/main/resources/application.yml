@@ -12,7 +12,7 @@ spring:
     username: sbsst
     password: sbs123414
 mybatis:
-  type-aliases-package: com.example.sbs.lolHi.dto
+  type-aliases-package: com.sbs.example.lolHi.dto
 server:
   error:
     include-exception: true

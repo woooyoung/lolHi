@@ -1,4 +1,4 @@
-package com.example.sbs.lolHi.controller.usr;
+package com.sbs.example.lolHi.controller.usr;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.sbs.lolHi.dto.Article;
-import com.example.sbs.lolHi.service.ArticleService;
+import com.sbs.example.lolHi.dto.Article;
+import com.sbs.example.lolHi.service.ArticleService;
 
 @Controller
 public class ArticleController {

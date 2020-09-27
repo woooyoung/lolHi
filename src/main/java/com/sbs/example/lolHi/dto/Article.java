@@ -1,4 +1,4 @@
-package com.example.sbs.lolHi.dto;
+package com.sbs.example.lolHi.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

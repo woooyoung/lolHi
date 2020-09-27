@@ -1,4 +1,4 @@
-package com.example.sbs.lolHi.controller.usr;
+package com.sbs.example.lolHi.controller.usr;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

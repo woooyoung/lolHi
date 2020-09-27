@@ -1,4 +1,4 @@
-package com.example.sbs.lolHi;
+package com.sbs.example.lolHi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
