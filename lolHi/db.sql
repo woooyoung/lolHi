@@ -1,7 +1,7 @@
 # 데이터 베이스 생성
-DROP DATABASE IF EXISTS lolHiT;
-CREATE DATABASE lolHiT;
-USE lolHiT;
+DROP DATABASE IF EXISTS lolHi;
+CREATE DATABASE lolHi;
+USE lolHi;
 
 # 게시물 테이블 생성
 CREATE TABLE article (
