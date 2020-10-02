@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sbs.example.lolHi.dto.TestData;
 import com.sbs.example.lolHi.service.TestDataService;
@@ -22,5 +23,11 @@ public class TestDataController {
 		model.addAttribute("testdatas", testdatas);
 		return null;
 
+	}
+
+	@RequestMapping("usr/TestData/insert")
+	@ResponseBody
+	public String InsertData() {
+		return null;
 	}
 }

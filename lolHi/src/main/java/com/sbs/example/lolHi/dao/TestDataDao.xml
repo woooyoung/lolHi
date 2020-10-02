@@ -8,4 +8,12 @@
 		SELECT *
 		FROM TEST
 	</select>
+
+
+	<insert id="insertData" parameterType="TestData">
+		INSERT INTO TEST (idx,
+		title, description, regDate,lastDate)
+		VALUES (#{idx}, #{title},
+		#{description}, #{regDate}, #{lastDate})
+	</insert>
 </mapper>

@@ -12,8 +12,12 @@ import com.sbs.example.lolHi.dto.TestData;
 public class TestDataService {
 	@Autowired
 	private TestDataDao testdataDao;
-	
-	public List<TestData> getTestDatas(){
+
+	public List<TestData> getTestDatas() {
 		return testdataDao.getTestDatas();
+	}
+
+	public void InsertData(TestData testdata) {
+		testdataDao.insertData(testdata);
 	}
 }
