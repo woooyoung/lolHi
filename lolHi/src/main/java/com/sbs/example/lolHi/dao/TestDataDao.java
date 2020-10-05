@@ -8,6 +8,6 @@ public interface TestDataDao {
 
 	List<TestData> getTestDatas();
 
-	void insertData(TestData testdata);
+	int insertData(TestData testdata);
 
 }

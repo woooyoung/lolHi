@@ -26,8 +26,16 @@ public class TestDataController {
 	}
 
 	@RequestMapping("usr/TestData/insert")
-	@ResponseBody
 	public String InsertData() {
+		TestData testdata = new TestData();
+		testdata.setDescription("des");
+		testdata.setLastDate("2000-09-09");
+		testdata.setRegDate("2000-09-09");
+		testdata.setTitle("11!1");
+		testdata.setIdx(1);
+		System.out.println(testdata.toString()+"******************");
+		testdataService.InsertData(testdata);
+		System.out.println("33333333333333333333");
 		return null;
 	}
 }

@@ -1,0 +1,18 @@
+2020-10-02 20:16:10 [ERROR] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field testdataDao in com.sbs.example.lolHi.service.TestDataService required a bean of type 'com.sbs.example.lolHi.dao.TestDataDao' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.sbs.example.lolHi.dao.TestDataDao' in your configuration.
+

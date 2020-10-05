@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TestData {
-	private int idx;
-	private String title;
-	private String description;
-	private String regDate;
-	private String lastDate;
+	private int idx=1;
+	private String title="hi2";
+	private String description="hi1";
+	private String regDate="hihi";
+	private String lastDate="hihi";
 }

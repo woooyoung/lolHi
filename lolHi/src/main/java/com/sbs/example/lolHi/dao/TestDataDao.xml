@@ -4,16 +4,17 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.sbs.example.lolHi.dao.TestDataDao">
+
 	<select id="getTestDatas" resultType="TestData">
 		SELECT *
 		FROM TEST
 	</select>
 
 
+
 	<insert id="insertData" parameterType="TestData">
-		INSERT INTO TEST (idx,
-		title, description, regDate,lastDate)
-		VALUES (#{idx}, #{title},
-		#{description}, #{regDate}, #{lastDate})
+		INSERT INTO TEST
+		idx = #{idx}, title = #{title},
+		description = #{description}, regDate = #{regDate}, lastDate = #{lastDate}
 	</insert>
 </mapper>
