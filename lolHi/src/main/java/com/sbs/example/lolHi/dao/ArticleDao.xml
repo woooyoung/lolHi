@@ -8,9 +8,16 @@
 		SELECT *
 		FROM article
 	</select>
+
+
 	<select id="getArticleById" resultType="Article">
 		SELECT *
 		FROM article
 		WHERE id = #{id}
 	</select>
+	
+	<delete id="deleteArticleById">
+		DELETE FROM article
+		WHERE id = #{id}
+	</delete>
 </mapper>
