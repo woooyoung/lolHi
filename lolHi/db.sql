@@ -24,3 +24,27 @@ SET regDate = NOW(),
 updateDate = NOW(),
 title = '제목2',
 `body` = '내용2';
+
+# 회원
+CREATE TABLE `member` (
+  id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY(id),
+  regDate DATETIME NOT NULL,
+  loginId CHAR(50) NOT NULL,
+  loginPw CHAR(120) NOT NULL,
+  `name` CHAR(50) NOT NULL
+);
+
+ALTER TABLE `lolHi`.`member` ADD UNIQUE INDEX (`loginId`); 
+
+INSERT INTO `member`
+SET regDate = NOW(),
+`name` = '홍길동',
+`loginId` = 'user1',
+`loginPw` = 'user1';
+
+INSERT INTO `member`
+SET regDate = NOW(),
+`name` = '홍길순',
+`loginId` = 'user2',
+`loginPw` = 'user2';
