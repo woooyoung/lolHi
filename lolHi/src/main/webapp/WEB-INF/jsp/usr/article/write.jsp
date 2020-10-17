@@ -23,6 +23,9 @@
 			제출 : <input type="submit" value="작성" />
 		</div>
 	</form>
+	<div>
+		<a href="list">리스트</a>
+	</div>
 
 </body>
 </html>
