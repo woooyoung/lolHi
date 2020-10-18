@@ -1296,3 +1296,412 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 2020-10-18 16:09:04 [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
 2020-10-18 16:10:22 [INFO ] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
 2020-10-18 16:10:23 [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-18 16:25:53 [INFO ] c.sbs.example.lolHi.LolHiApplication - Starting LolHiApplication on choejin-yeong-ui-MacBook-Pro.local with PID 74138 (/Users/choiwooyoung/Documents/lolHi/lolHi/target/classes started by choiwooyoung in /Users/choiwooyoung/Documents/lolHi/lolHi)
+2020-10-18 16:25:53 [INFO ] c.sbs.example.lolHi.LolHiApplication - The following profiles are active: local
+2020-10-18 16:25:53 [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-18 16:25:53 [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-18 16:25:54 [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2020-10-18 16:25:54 [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2020-10-18 16:25:54 [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-10-18 16:25:54 [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-18 16:25:54 [INFO ] org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-10-18 16:25:54 [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-10-18 16:25:54 [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 746 ms
+2020-10-18 16:25:54 [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-18 16:25:54 [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-10-18 16:25:54 [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2020-10-18 16:25:54 [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path ''
+2020-10-18 16:25:54 [INFO ] c.sbs.example.lolHi.LolHiApplication - Started LolHiApplication in 1.5 seconds (JVM running for 2.144)
+2020-10-18 16:25:58 [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-18 16:25:58 [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-10-18 16:25:58 [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-10-18 16:39:59 [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-18 16:40:00 [INFO ] c.sbs.example.lolHi.LolHiApplication - Starting LolHiApplication on choejin-yeong-ui-MacBook-Pro.local with PID 74138 (/Users/choiwooyoung/Documents/lolHi/lolHi/target/classes started by choiwooyoung in /Users/choiwooyoung/Documents/lolHi/lolHi)
+2020-10-18 16:40:00 [INFO ] c.sbs.example.lolHi.LolHiApplication - The following profiles are active: local
+2020-10-18 16:40:00 [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2020-10-18 16:40:00 [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2020-10-18 16:40:00 [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-10-18 16:40:00 [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-18 16:40:00 [INFO ] org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-10-18 16:40:00 [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-10-18 16:40:00 [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 193 ms
+2020-10-18 16:40:00 [WARN ] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.sbs.example.lolHi.controller.usr.MemberController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@31ca8444]
+2020-10-18 16:40:00 [INFO ] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-10-18 16:40:00 [INFO ] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-18 16:40:00 [ERROR] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.sbs.example.lolHi.controller.usr.MemberController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@31ca8444]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.sbs.example.lolHi.LolHiApplication.main(LolHiApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.sbs.example.lolHi.controller.usr.MemberController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@31ca8444]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: HttpSession
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: HttpSession
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 30 common frames omitted
+2020-10-18 16:42:54 [INFO ] c.sbs.example.lolHi.LolHiApplication - Starting LolHiApplication on choejin-yeong-ui-MacBook-Pro.local with PID 74138 (/Users/choiwooyoung/Documents/lolHi/lolHi/target/classes started by choiwooyoung in /Users/choiwooyoung/Documents/lolHi/lolHi)
+2020-10-18 16:42:54 [INFO ] c.sbs.example.lolHi.LolHiApplication - The following profiles are active: local
+2020-10-18 16:42:54 [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2020-10-18 16:42:54 [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2020-10-18 16:42:54 [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-10-18 16:42:54 [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-18 16:42:54 [INFO ] org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-10-18 16:42:54 [INFO ] o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-10-18 16:42:54 [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 187 ms
+2020-10-18 16:42:54 [WARN ] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.sbs.example.lolHi.controller.usr.MemberController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7fefb547]
+2020-10-18 16:42:54 [INFO ] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-10-18 16:42:54 [INFO ] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-18 16:42:54 [ERROR] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.sbs.example.lolHi.controller.usr.MemberController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7fefb547]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.sbs.example.lolHi.LolHiApplication.main(LolHiApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.sbs.example.lolHi.controller.usr.MemberController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7fefb547]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: HttpSession
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: HttpSession
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 30 common frames omitted
+2020-10-18 16:44:18 [INFO ] c.sbs.example.lolHi.LolHiApplication - Starting LolHiApplication on choejin-yeong-ui-MacBook-Pro.local with PID 74138 (/Users/choiwooyoung/Documents/lolHi/lolHi/target/classes started by choiwooyoung in /Users/choiwooyoung/Documents/lolHi/lolHi)
+2020-10-18 16:44:18 [INFO ] c.sbs.example.lolHi.LolHiApplication - The following profiles are active: local
+2020-10-18 16:44:18 [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2020-10-18 16:44:18 [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2020-10-18 16:44:18 [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-10-18 16:44:18 [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-18 16:44:18 [INFO ] org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-10-18 16:44:18 [INFO ] o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-10-18 16:44:18 [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 161 ms
+2020-10-18 16:44:18 [WARN ] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.sbs.example.lolHi.controller.usr.MemberController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@35308161]
+2020-10-18 16:44:18 [INFO ] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-10-18 16:44:18 [INFO ] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-18 16:44:18 [ERROR] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.sbs.example.lolHi.controller.usr.MemberController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@35308161]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.sbs.example.lolHi.LolHiApplication.main(LolHiApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.sbs.example.lolHi.controller.usr.MemberController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@35308161]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: HttpSession
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: HttpSession
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 30 common frames omitted
+2020-10-18 16:45:03 [INFO ] c.sbs.example.lolHi.LolHiApplication - Starting LolHiApplication on choejin-yeong-ui-MacBook-Pro.local with PID 74138 (/Users/choiwooyoung/Documents/lolHi/lolHi/target/classes started by choiwooyoung in /Users/choiwooyoung/Documents/lolHi/lolHi)
+2020-10-18 16:45:03 [INFO ] c.sbs.example.lolHi.LolHiApplication - The following profiles are active: local
+2020-10-18 16:45:03 [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2020-10-18 16:45:03 [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2020-10-18 16:45:03 [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-10-18 16:45:03 [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-18 16:45:03 [INFO ] org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-10-18 16:45:03 [INFO ] o.a.c.c.C.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-10-18 16:45:03 [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 156 ms
+2020-10-18 16:45:03 [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-18 16:45:03 [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-10-18 16:45:03 [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2020-10-18 16:45:03 [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path ''
+2020-10-18 16:45:03 [INFO ] c.sbs.example.lolHi.LolHiApplication - Started LolHiApplication in 0.287 seconds (JVM running for 1151.247)
+2020-10-18 16:45:03 [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-10-18 16:45:09 [INFO ] o.a.c.c.C.[Tomcat-3].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-18 16:45:09 [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-10-18 16:45:09 [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2020-10-18 16:45:15 [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-10-18 16:45:15 [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-10-18 16:45:15 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+		FROM member
+		WHERE loginId = 'ddd'
+ {executed in 5 msec}
+2020-10-18 16:45:15 [INFO ] jdbc.resultsettable - 
+|---|--------|-----------|--------|--------|-----|
+|id |regdate |updatedate |loginid |loginpw |name |
+|---|--------|-----------|--------|--------|-----|
+|---|--------|-----------|--------|--------|-----|
+
+2020-10-18 16:45:25 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+		FROM member
+		WHERE loginId = 'ddd'
+ {executed in 1 msec}
+2020-10-18 16:45:25 [INFO ] jdbc.resultsettable - 
+|---|--------|-----------|--------|--------|-----|
+|id |regdate |updatedate |loginid |loginpw |name |
+|---|--------|-----------|--------|--------|-----|
+|---|--------|-----------|--------|--------|-----|
+
+2020-10-18 16:45:25 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO member
+		 SET regDate = NOW(),
+			updateDate = NOW(),
+
+				loginId = 'ddd',
+
+				loginPw = 'ddd',
+
+				`name` = 'ddd'
+ {executed in 2 msec}
+2020-10-18 16:45:25 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: INSERT INTO member
+		 SET regDate = NOW(),
+			updateDate = NOW(),
+
+				loginId = 'ddd',
+
+				loginPw = 'ddd',
+
+				`name` = 'ddd'
+ {executed in 0 msec}
+2020-10-18 16:45:25 [INFO ] jdbc.resultsettable - 
+|--------------|
+|generated_key |
+|--------------|
+|1             |
+|--------------|
+
+2020-10-18 16:45:27 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT COUNT(*)
+		FROM
+		article
+ {executed in 1 msec}
+2020-10-18 16:45:27 [INFO ] jdbc.resultsettable - 
+|---------|
+|count(*) |
+|---------|
+|2        |
+|---------|
+
+2020-10-18 16:45:27 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+		FROM article
+		ORDER BY id DESC
+
+			LIMIT 0, 10
+ {executed in 1 msec}
+2020-10-18 16:45:27 [INFO ] jdbc.resultsettable - 
+|---|--------------------|--------------------|------|-----|
+|id |regdate             |updatedate          |title |body |
+|---|--------------------|--------------------|------|-----|
+|2  |2020-10-18 15:16:40 |2020-10-18 15:16:40 |제목2   |내용2  |
+|1  |2020-10-18 15:16:40 |2020-10-18 15:16:40 |제목1   |내용1  |
+|---|--------------------|--------------------|------|-----|
+
+2020-10-18 16:45:40 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+		FROM member
+		WHERE loginId = 'ddd'
+ {executed in 1 msec}
+2020-10-18 16:45:40 [INFO ] jdbc.resultsettable - 
+|---|--------------------|--------------------|--------|--------|-----|
+|id |regdate             |updatedate          |loginid |loginpw |name |
+|---|--------------------|--------------------|--------|--------|-----|
+|1  |2020-10-18 16:45:25 |2020-10-18 16:45:25 |ddd     |ddd     |ddd  |
+|---|--------------------|--------------------|--------|--------|-----|
+
+2020-10-18 16:45:43 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+		FROM member
+		WHERE loginId = 'ddd'
+ {executed in 1 msec}
+2020-10-18 16:45:43 [INFO ] jdbc.resultsettable - 
+|---|--------------------|--------------------|--------|--------|-----|
+|id |regdate             |updatedate          |loginid |loginpw |name |
+|---|--------------------|--------------------|--------|--------|-----|
+|1  |2020-10-18 16:45:25 |2020-10-18 16:45:25 |ddd     |ddd     |ddd  |
+|---|--------------------|--------------------|--------|--------|-----|
+
+2020-10-18 16:45:45 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT COUNT(*)
+		FROM
+		article
+ {executed in 1 msec}
+2020-10-18 16:45:45 [INFO ] jdbc.resultsettable - 
+|---------|
+|count(*) |
+|---------|
+|2        |
+|---------|
+
+2020-10-18 16:45:45 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+		FROM article
+		ORDER BY id DESC
+
+			LIMIT 0, 10
+ {executed in 1 msec}
+2020-10-18 16:45:45 [INFO ] jdbc.resultsettable - 
+|---|--------------------|--------------------|------|-----|
+|id |regdate             |updatedate          |title |body |
+|---|--------------------|--------------------|------|-----|
+|2  |2020-10-18 15:16:40 |2020-10-18 15:16:40 |제목2   |내용2  |
+|1  |2020-10-18 15:16:40 |2020-10-18 15:16:40 |제목1   |내용1  |
+|---|--------------------|--------------------|------|-----|
+
+2020-10-18 16:46:06 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT COUNT(*)
+		FROM
+		article
+ {executed in 1 msec}
+2020-10-18 16:46:06 [INFO ] jdbc.resultsettable - 
+|---------|
+|count(*) |
+|---------|
+|2        |
+|---------|
+
+2020-10-18 16:46:06 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+		FROM article
+		ORDER BY id DESC
+
+			LIMIT 0, 10
+ {executed in 1 msec}
+2020-10-18 16:46:06 [INFO ] jdbc.resultsettable - 
+|---|--------------------|--------------------|------|-----|
+|id |regdate             |updatedate          |title |body |
+|---|--------------------|--------------------|------|-----|
+|2  |2020-10-18 15:16:40 |2020-10-18 15:16:40 |제목2   |내용2  |
+|1  |2020-10-18 15:16:40 |2020-10-18 15:16:40 |제목1   |내용1  |
+|---|--------------------|--------------------|------|-----|
+
+2020-10-18 16:46:11 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT COUNT(*)
+		FROM
+		article
+ {executed in 0 msec}
+2020-10-18 16:46:11 [INFO ] jdbc.resultsettable - 
+|---------|
+|count(*) |
+|---------|
+|2        |
+|---------|
+
+2020-10-18 16:46:11 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+		FROM article
+		ORDER BY id DESC
+
+			LIMIT 0, 10
+ {executed in 0 msec}
+2020-10-18 16:46:11 [INFO ] jdbc.resultsettable - 
+|---|--------------------|--------------------|------|-----|
+|id |regdate             |updatedate          |title |body |
+|---|--------------------|--------------------|------|-----|
+|2  |2020-10-18 15:16:40 |2020-10-18 15:16:40 |제목2   |내용2  |
+|1  |2020-10-18 15:16:40 |2020-10-18 15:16:40 |제목1   |내용1  |
+|---|--------------------|--------------------|------|-----|
+

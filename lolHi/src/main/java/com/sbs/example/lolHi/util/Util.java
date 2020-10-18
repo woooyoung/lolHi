@@ -3,7 +3,6 @@ package com.sbs.example.lolHi.util;
 import java.math.BigInteger;
 
 public class Util {
-
 	public static int getAsInt(Object object) {
 		return getAsInt(object, -1);
 	}
@@ -22,7 +21,11 @@ public class Util {
 		return defaultValue;
 	}
 
-	public static String getAsStr(Object object, String string) {
+	public static String getAsStr(Object object, String defaultValue) {
+		if (object == null) {
+			return defaultValue;
+		}
+
 		if (object instanceof String) {
 			return (String) (object);
 		}

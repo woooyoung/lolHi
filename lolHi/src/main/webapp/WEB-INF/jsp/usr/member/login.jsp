@@ -4,30 +4,45 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Login</title>
+<title>회원 로그인</title>
 </head>
 <body>
-<h3>Login</h3>
-	<form action="./doLogin" method="POST">
-		<div class="table-box con">
-			<table>
-				<tbody>
-					<tr>
-						<th>로그인 아이디</th>
-						<td><input type="text" name="loginId"
-							placeholder="로그인 아이디를 입력해주세요." autofocus="autofocus" /></td>
-					</tr>
-					<tr>
-						<th>로그인 비번</th>
-						<td><input type="password" name="loginPw"
-							placeholder="로그인 비번을 입력해주세요." /></td>
-					</tr>
-					<tr>
-						<th>로그인</th>
-						<td><input type="submit" value="로그인"></td>
-					</tr>
-				</tbody>
-			</table>
+	<h1>회원 로그인</h1>
+	<script>
+		var loginFormSubmitDone = false;
+		function loginFormSubmit(form) {
+			if (loginFormSubmitDone) {
+				alert('처리중입니다.');
+				return;
+			}
+			form.loginId.value = form.loginId.value.trim();
+			if (form.loginId.value.length == 0) {
+				alert('로그인 아이디를 입력해주세요.');
+				form.loginId.focus();
+				return;
+			}
+			form.loginPw.value = form.loginPw.value.trim();
+			if (form.loginPw.value.length == 0) {
+				alert('로그인 비번을 입력해주세요.');
+				form.loginPw.focus();
+				return;
+			}
+			form.submit();
+			loginFormSubmitDone = true;
+		}
+	</script>
+	<form action="doLogin" method="POST"
+		onsubmit="loginFormSubmit(this); return false;">
+		<div>
+			로그인 아이디 : <input type="text" maxlength="30"
+				placeholder="로그인 아이디를 입력해주세요." name="loginId" />
+		</div>
+		<div>
+			로그인 비번 : <input type="password" maxlength="30"
+				placeholder="로그인 비번을 입력해주세요." name="loginPw" />
+		</div>
+		<div>
+			로그인 : <input type="submit" value="로그인" />
 		</div>
 	</form>
 </body>
