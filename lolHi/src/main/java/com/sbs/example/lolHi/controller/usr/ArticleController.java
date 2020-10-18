@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sbs.example.lolHi.dto.Article;
 import com.sbs.example.lolHi.service.ArticleService;
+import com.sbs.example.lolHi.util.Util;
 
 @Controller
 public class ArticleController {
@@ -56,14 +57,6 @@ public class ArticleController {
 		model.addAttribute("article", article);
 
 		return "usr/article/detail";
-	}
-
-	@RequestMapping("/usr/article/detail2")
-	@ResponseBody
-	public Article showDetail2(Model model, int id) {
-		Article article = articleService.getArticleById(id);
-
-		return article;
 	}
 
 	@RequestMapping("/usr/article/doDelete")
