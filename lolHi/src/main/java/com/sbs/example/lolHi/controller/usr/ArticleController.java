@@ -3,6 +3,8 @@ package com.sbs.example.lolHi.controller.usr;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -61,14 +63,34 @@ public class ArticleController {
 
 	@RequestMapping("/usr/article/doDelete")
 	@ResponseBody
-	public String doDelete(int id) {
+	public String doDelete(HttpSession session, int id) {
+
+		int loginedMemberId = 0;
+
+		if (session.getAttribute("loginedMemberId") != null) {
+			loginedMemberId = (int) session.getAttribute("loginedMemberId");
+		}
+
+		if (loginedMemberId == 0) {
+			return String.format("<script> alert('로그인 후 이용해주세요.'); history.back(); </script>");
+		}
 		articleService.deleteArticleById(id);
 
 		return String.format("<script> alert('%d번 글을 삭제하였습니다.'); location.replace('/usr/article/list'); </script>", id);
 	}
 
 	@RequestMapping("/usr/article/modify")
-	public String showModify(Model model, int id) {
+	public String showModify(Model model, HttpSession session, int id) {
+
+		int loginedMemberId = 0;
+
+		if (session.getAttribute("loginedMemberId") != null) {
+			loginedMemberId = (int) session.getAttribute("loginedMemberId");
+		}
+
+		if (loginedMemberId == 0) {
+			return String.format("<script> alert('로그인 후 이용해주세요.'); history.back(); </script>");
+		}
 		Article article = articleService.getArticleById(id);
 
 		model.addAttribute("article", article);
@@ -86,7 +108,18 @@ public class ArticleController {
 	}
 
 	@RequestMapping("/usr/article/write")
-	public String showWrite() {
+	public String showWrite(HttpSession session) {
+
+		int loginedMemberId = 0;
+
+		if (session.getAttribute("loginedMemberId") != null) {
+			loginedMemberId = (int) session.getAttribute("loginedMemberId");
+		}
+
+		if (loginedMemberId == 0) {
+			return String.format("<script> alert('로그인 후 이용해주세요.'); history.back(); </script>");
+		}
+
 		return "usr/article/write";
 	}
 
