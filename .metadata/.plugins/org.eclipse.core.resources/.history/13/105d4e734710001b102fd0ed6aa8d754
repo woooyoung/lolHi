@@ -1,0 +1,5 @@
+package com.sbs.example.lolHi.dto;
+
+public class Member {
+
+}
