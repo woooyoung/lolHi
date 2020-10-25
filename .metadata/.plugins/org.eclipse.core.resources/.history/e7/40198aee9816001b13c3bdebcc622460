@@ -33,12 +33,12 @@
 		id = #{id}
 	</select>
 	
-	<update id="modify">
+	<update id="modifyMember">
 		UPDATE member
 		<set>
 			updateDate = NOW(),
 			<if test="name != null">
-				`name` = #{name},
+				name = #{name},
 			</if>
 		</set>
 		WHERE id = #{id}
