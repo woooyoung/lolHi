@@ -9172,3 +9172,6 @@ Binding(COMMAND+D,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-25 15:05:25.722
 !MESSAGE executing callback sts4.classpath.KSFxgOwX SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2020-10-25 15:22:18.262
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
