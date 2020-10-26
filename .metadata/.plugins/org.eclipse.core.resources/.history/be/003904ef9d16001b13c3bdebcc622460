@@ -19,7 +19,7 @@ public class ArticleService {
 		int page = Util.getAsInt(param.get("page"), 1);
 
 		// 한 리스트에 나올 수 있는 게시물 게수
-		int itemsCountInAPage = Util.getAsInt(param.get("itemsCountInAPage"), 10);
+		int itemsCountInAPage = Util.getAsInt(param.get("itemsCountInAPage"), 2);
 
 		if (itemsCountInAPage > 100) {
 			itemsCountInAPage = 100;
@@ -36,8 +36,8 @@ public class ArticleService {
 		return articleDao.getArticles(param);
 	}
 
-	public Article getForPrintArticleById(int id) {
-		return articleDao.getForPrintArticleById(id);
+	public Article getArticleById(int id) {
+		return articleDao.getArticleById(id);
 	}
 
 	public void deleteArticleById(int id) {

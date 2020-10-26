@@ -1,8 +1,9 @@
 # 데이터 베이스 생성
-DROP DATABASE IF EXISTS lolHi;
-CREATE DATABASE lolHi;
-USE lolHi;
+DROP DATABASE IF EXISTS lolHiT;
+CREATE DATABASE lolHiT;
+USE lolHiT;
 
+# 게시물 테이블 생성
 CREATE TABLE article (
     id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     regDate DATETIME NOT NULL,
@@ -10,18 +11,19 @@ CREATE TABLE article (
     title CHAR(200) NOT NULL,
     `body` TEXT NOT NULL
 );
+
 # 게시물 데이터 생성
 INSERT INTO article
 SET regDate = NOW(),
 updateDate = NOW(),
 title = '제목1',
 `body` = '내용1';
+
 INSERT INTO article
 SET regDate = NOW(),
 updateDate = NOW(),
 title = '제목2',
-`body` = '내용2'; 
-
+`body` = '내용2';
 
 # 회원 테이블 생성
 CREATE TABLE `member` (
@@ -31,7 +33,7 @@ CREATE TABLE `member` (
     loginId CHAR(20) NOT NULL,
     loginPw CHAR(100) NOT NULL,
     `name` CHAR(100) NOT NULL
-); 
+);
 
 # 회원 생성
 INSERT INTO `member`
@@ -66,4 +68,4 @@ SET regDate = NOW(),
 updateDate = NOW(),
 title = '제목4',
 `body` = '내용4',
-memberId = 2; 
+memberId = 2;
