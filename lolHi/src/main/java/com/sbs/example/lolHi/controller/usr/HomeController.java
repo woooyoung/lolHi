@@ -6,23 +6,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
-
 	@RequestMapping("/usr/home/main")
 	@ResponseBody
 	public String showMain() {
-		return "Hi";
+		return "안녕";
 	}
 
 	@RequestMapping("/usr/home/main2")
 	@ResponseBody
 	public String showMain2() {
-		return "bye";
+		return "잘가";
 	}
 
 	@RequestMapping("/usr/home/main3")
 	@ResponseBody
 	public String showMain3() {
-		return "seeya";
+		return "또봐";
 	}
 
 	@RequestMapping("/usr/home/plus")
@@ -36,17 +35,4 @@ public class HomeController {
 	public int showMinus(int a, int b) {
 		return a - b;
 	}
-
-	@RequestMapping("/usr/home/multiple")
-	@ResponseBody
-	public int showMulti(int a, int b) {
-		return a * b;
-	}
-
-	@RequestMapping("/usr/home/div")
-	@ResponseBody
-	public int showDiv(int a, int b) {
-		return a / b;
-	}
-
 }

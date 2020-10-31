@@ -37,8 +37,7 @@
 		form.submit();
 		joinFormSubmitDone = true;
 	}
-<
-/script>
+</script>
 <form action="doJoin" method="POST"
 	onsubmit="joinFormSubmit(this); return false;">
 	<div>

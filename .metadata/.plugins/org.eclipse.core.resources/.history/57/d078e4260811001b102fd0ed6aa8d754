@@ -1,5 +1,0 @@
-package com.sbs.example.lolHi.dao;
-
-public interface memberDao {
-
-}

@@ -21,4 +21,6 @@
 		href="modify?id=${article.id}">수정</a>
 </div>
 
+
+
 <%@ include file="../part/foot.jspf"%>

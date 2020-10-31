@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +23,7 @@ public class ArticleController {
 
 	@RequestMapping("/usr/article/list")
 	public String showList(Model model, @RequestParam Map<String, Object> param) {
-		int totalCount = articleService.getTotalCount();
+		int totalCount = articleService.getTotalCount(param);
 		int itemsCountInAPage = 10;
 		int totalPage = (int) Math.ceil(totalCount / (double) itemsCountInAPage);
 		int pageMenuArmSize = 10;
@@ -53,6 +54,7 @@ public class ArticleController {
 	@RequestMapping("/usr/article/detail")
 	public String showDetail(Model model, int id) {
 		Article article = articleService.getForPrintArticleById(id);
+
 		model.addAttribute("article", article);
 
 		return "usr/article/detail";
@@ -69,6 +71,7 @@ public class ArticleController {
 			model.addAttribute("historyBack", true);
 			return "common/redirect";
 		}
+
 		articleService.deleteArticleById(id);
 
 		model.addAttribute("msg", String.format("%d번 글을 삭제하였습니다.", id));
@@ -79,6 +82,7 @@ public class ArticleController {
 	@RequestMapping("/usr/article/modify")
 	public String showModify(HttpServletRequest req, Model model, int id) {
 		int loginedMemberId = (int) req.getAttribute("loginedMemberId");
+
 		Article article = articleService.getForPrintArticleById(id);
 
 		if (article.getMemberId() != loginedMemberId) {
@@ -86,6 +90,7 @@ public class ArticleController {
 			model.addAttribute("historyBack", true);
 			return "common/redirect";
 		}
+
 		model.addAttribute("article", article);
 
 		return "usr/article/modify";
@@ -93,7 +98,9 @@ public class ArticleController {
 
 	@RequestMapping("/usr/article/doModify")
 	public String doModify(HttpServletRequest req, int id, String title, String body, Model model) {
+
 		int loginedMemberId = (int) req.getAttribute("loginedMemberId");
+
 		Article article = articleService.getForPrintArticleById(id);
 
 		if (article.getMemberId() != loginedMemberId) {
@@ -101,6 +108,7 @@ public class ArticleController {
 			model.addAttribute("historyBack", true);
 			return "common/redirect";
 		}
+
 		articleService.modifyArticle(id, title, body);
 
 		model.addAttribute("msg", String.format("%d번 글을 수정하였습니다.", id));
@@ -118,6 +126,7 @@ public class ArticleController {
 	@RequestMapping("/usr/article/doWrite")
 	public String doWrite(HttpServletRequest req, @RequestParam Map<String, Object> param, Model model) {
 		int loginedMemberId = (int) req.getAttribute("loginedMemberId");
+
 		param.put("memberId", loginedMemberId);
 		int id = articleService.writeArticle(param);
 
@@ -125,4 +134,6 @@ public class ArticleController {
 		model.addAttribute("replaceUri", String.format("/usr/article/detail?id=%d", id));
 		return "common/redirect";
 	}
+	
+	
 }

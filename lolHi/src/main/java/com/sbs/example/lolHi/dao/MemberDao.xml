@@ -29,8 +29,7 @@
 	<select id="getMemberById" resultType="Member">
 		SELECT *
 		FROM member
-		WHERE
-		id = #{id}
+		WHERE id = #{id}
 	</select>
 	
 	<update id="modify">
@@ -43,4 +42,5 @@
 		</set>
 		WHERE id = #{id}
 	</update>
+
 </mapper>

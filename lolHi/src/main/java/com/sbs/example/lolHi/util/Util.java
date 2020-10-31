@@ -3,6 +3,7 @@ package com.sbs.example.lolHi.util;
 import java.math.BigInteger;
 
 public class Util {
+
 	public static int getAsInt(Object object) {
 		return getAsInt(object, -1);
 	}

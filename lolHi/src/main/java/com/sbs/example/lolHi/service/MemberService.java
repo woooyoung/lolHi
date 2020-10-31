@@ -1,6 +1,7 @@
 package com.sbs.example.lolHi.service;
 
 import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,18 +16,19 @@ public class MemberService {
 
 	public int join(Map<String, Object> param) {
 		memberDao.join(param);
-
+		
 		int id = Util.getAsInt(param.get("id"));
+
 		return id;
 	}
 
 	public boolean isJoinAvailableLoginId(String loginId) {
 		Member member = memberDao.getMemberByLoginId(loginId);
-
-		if (member == null) {
+		
+		if ( member == null ) {
 			return true;
 		}
-
+		
 		return false;
 	}
 
@@ -37,8 +39,9 @@ public class MemberService {
 	public Member getMemberById(int id) {
 		return memberDao.getMemberById(id);
 	}
-	
+
 	public void modify(Map<String, Object> param) {
 		memberDao.modify(param);
 	}
+
 }

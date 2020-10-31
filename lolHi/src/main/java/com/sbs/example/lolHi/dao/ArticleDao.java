@@ -11,7 +11,7 @@ import com.sbs.example.lolHi.dto.Article;
 @Mapper
 public interface ArticleDao {
 
-	List<Article> getForPrintArticle(Map<String, Object> param);
+	List<Article> getForPrintArticles(Map<String, Object> param);
 
 	Article getForPrintArticleById(@Param("id") int id);
 
@@ -21,5 +21,6 @@ public interface ArticleDao {
 
 	void writeArticle(Map<String, Object> param);
 
-	int getTotalCount();
+	int getTotalCount(Map<String, Object> param);
+
 }
