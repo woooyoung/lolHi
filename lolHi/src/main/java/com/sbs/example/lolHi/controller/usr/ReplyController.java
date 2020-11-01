@@ -25,11 +25,13 @@ public class ReplyController {
 		param.put("memberId", loginedMemberId);
 		int id = replyService.write(param);
 
-		String relTypeCode = (String)param.get("relTypeCode");
+		String relTypeCode = (String) param.get("relTypeCode");
 		int relId = Util.getAsInt(param.get("relId"));
 
 		model.addAttribute("msg", String.format("%d번 댓글이 생성되였습니다.", id));
 		model.addAttribute("replaceUri", String.format("/usr/%s/detail?id=%d", relTypeCode, relId));
+
 		return "common/redirect";
 	}
+
 }
