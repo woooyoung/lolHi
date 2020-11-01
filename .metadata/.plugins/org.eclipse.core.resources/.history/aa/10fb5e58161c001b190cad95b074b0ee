@@ -1,0 +1,8 @@
+package snippet;
+
+public class Snippet {
+	<div>
+			<a href="/usr/reply/doDelete?id=${reply.id}">삭제</a>
+		</div>
+}
+

@@ -51,7 +51,6 @@ INDEX VERSION 1.131+/Users/choiwooyoung/Documents/lolHi/.metadata/.plugins/org.e
 469599693.index
 3396951079.index
 308716992.index
-901531116.index
 4093606252.index
 865700891.index
 1963614020.index
