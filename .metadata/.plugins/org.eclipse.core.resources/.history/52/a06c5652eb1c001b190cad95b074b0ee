@@ -30,12 +30,10 @@
 
 	<select id="getForPrintArticleById" resultMap="article">
 		SELECT A.*,
-		M.name
-		AS extra__writer
+		M.name AS extra__writer
 		FROM article AS A
 		INNER JOIN `member` AS M
-		ON A.memberId
-		= M.id
+		ON A.memberId = M.id
 		WHERE A.id = #{id}
 	</select>
 
@@ -75,6 +73,8 @@
 			</if>
 		</set>
 	</insert>
+	
+	
 
 	<resultMap type="Article" id="article">
 		<id property="id" column="id" />
