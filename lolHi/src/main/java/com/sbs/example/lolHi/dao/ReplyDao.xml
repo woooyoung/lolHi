@@ -22,9 +22,8 @@
 			</if>
 		</set>
 	</insert>
-	
-	
-	
+
+
 	<select id="getForPrintReplies" resultMap="reply">
 		SELECT RE.*,
 		M.name AS
@@ -38,7 +37,7 @@
 		ORDER
 		BY RE.id DESC
 	</select>
-	
+
 	<select id="getReply" resultType="Reply">
 		SELECT *
 		FROM reply
@@ -50,7 +49,7 @@
 		DELETE FROM reply
 		WHERE id = #{id}
 	</delete>
-	
+
 	<resultMap type="Reply" id="reply">
 		<id property="id" column="id" />
 		<id property="regDate" column="regDate" />
@@ -64,5 +63,5 @@
 			<id property="writer" column="extra__writer" />
 		</association>
 	</resultMap>
-	
+
 </mapper>

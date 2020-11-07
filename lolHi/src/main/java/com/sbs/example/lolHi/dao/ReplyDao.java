@@ -19,5 +19,4 @@ public interface ReplyDao {
 
 	void deleteReplyById(@Param("id") int id);
 
-
 }

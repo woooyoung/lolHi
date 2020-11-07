@@ -1,5 +1,0 @@
-package com.sbs.example.lolHi.interceptor;
-
-public class NeedToLoginInterceptor {
-
-}

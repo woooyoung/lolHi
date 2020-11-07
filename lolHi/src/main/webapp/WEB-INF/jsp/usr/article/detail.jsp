@@ -15,18 +15,18 @@
 <div>${age}</div>
 
 <div>
-	<a href="${listUrl}">리스트</a> <a
-		onclick="if ( confirm('삭제하시겠습니까?') == false ) return false;"
-		href="doDelete?id=${article.id}">삭제</a> <a
-		href="modify?id=${article.id}">수정</a>
+	<a href="${listUrl}">리스트</a>
+	<a onclick="if ( confirm('삭제하시겠습니까?') == false ) return false;"
+		href="doDelete?id=${article.id}">삭제</a>
+	<a href="modify?id=${article.id}">수정</a>
 </div>
 
 <h2>댓글 작성</h2>
 
 <form action="/usr/reply/doWrite" method="POST">
-	<input type="hidden" name="redirectUrl" value="${currentUri}" /> <input
-		type="hidden" name="relTypeCode" value="article" /> <input
-		type="hidden" name="relId" value="${param.id}" />
+	<input type="hidden" name="redirectUrl" value="${currentUri}" />
+	<input type="hidden" name="relTypeCode" value="article" />
+	<input type="hidden" name="relId" value="${param.id}" />
 
 	<div>
 		<textarea rows="10" name="body" placeholder="내용"></textarea>
@@ -46,8 +46,8 @@
 	<div>작성자 : ${reply.extra.writer}</div>
 	<div>내용 : ${reply.body}</div>
 	<div>
-		<a
-			href="/usr/reply/doDelete?id=${reply.id}&redirectUrl=${encodedCurrentUri}">삭제</a>
+		<a href="/usr/reply/doDelete?id=${reply.id}&redirectUrl=${encodedCurrentUri}">삭제</a>
+		<a href="/usr/reply/modify?id=${reply.id}&redirectUrl=${encodedCurrentUri}">수정</a>
 	</div>
 	<hr />
 </c:forEach>

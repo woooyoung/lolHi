@@ -1,5 +1,0 @@
-package com.sbs.example.lolHi.config;
-
-public class WebMvcConfig {
-
-}
