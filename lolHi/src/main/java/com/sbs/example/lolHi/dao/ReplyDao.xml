@@ -22,6 +22,17 @@
 			</if>
 		</set>
 	</insert>
+	
+	<update id="modify">
+		UPDATE reply
+		<set>
+			updateDate = NOW(),
+			<if test="body != null">
+				`body` = #{body},
+			</if>
+		</set>
+		WHERE id = #{id}
+	</update>
 
 
 	<select id="getForPrintReplies" resultMap="reply">

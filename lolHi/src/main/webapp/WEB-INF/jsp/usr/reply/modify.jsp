@@ -4,7 +4,8 @@
 <c:set var="title" value="게시물 댓글 수정" />
 <%@ include file="../part/head.jspf"%>
 <form action="doModify" method="POST">
-	<input type="hidden" name="id" value="${reply.id}" />
+	<input type="hidden" name="id" value="${reply.id}" /> <input
+		type=hidden name="redirectUrl" value="${param.redirectUrl}" />
 	<div>번호 : ${reply.id}</div>
 	<div>작성날짜 : ${reply.regDate}</div>
 	<div>수정날짜 : ${reply.updateDate}</div>
@@ -18,7 +19,7 @@
 </form>
 
 <div>
-	<a href="list">리스트</a>
+	<a href="${param.redirectUrl}">돌아가기</a>
 </div>
 
 <%@ include file="../part/foot.jspf"%>

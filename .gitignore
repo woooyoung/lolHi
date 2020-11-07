@@ -1,4 +1,4 @@
-/.metadata/
+.metadata/
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -33,6 +33,10 @@ build/
 ### VS Code ###
 .vscode/
 
+*.DS_Store
+
 bin/
-log/
 LOG_PATH_IS_UNDEFINED/
+
+log/
+lolHi/log
