@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sbs.example.lolHi.dto.Article;
+import com.sbs.example.lolHi.dto.Member;
 import com.sbs.example.lolHi.dto.Reply;
 import com.sbs.example.lolHi.service.ArticleService;
 import com.sbs.example.lolHi.service.ReplyService;
@@ -25,7 +26,9 @@ public class ArticleController {
 	private ReplyService replyService;
 
 	@RequestMapping("/usr/article/list")
-	public String showList(Model model, @RequestParam Map<String, Object> param) {
+	public String showList(HttpServletRequest req, Model model, @RequestParam Map<String, Object> param) {
+		Member loginedMember = (Member)req.getAttribute("loginedMember");
+		
 		int totalCount = articleService.getTotalCount(param);
 		int itemsCountInAPage = 10;
 		int totalPage = (int) Math.ceil(totalCount / (double) itemsCountInAPage);
@@ -41,7 +44,7 @@ public class ArticleController {
 		}
 
 		param.put("itemsCountInAPage", itemsCountInAPage);
-		List<Article> articles = articleService.getForPrintArticles(param);
+		List<Article> articles = articleService.getForPrintArticles(loginedMember, param);
 
 		model.addAttribute("totalCount", totalCount);
 		model.addAttribute("totalPage", totalPage);
@@ -58,14 +61,16 @@ public class ArticleController {
 	public String showDetail(Model model, int id, String listUrl) {
 		Article article = articleService.getForPrintArticleById(id);
 		List<Reply> replies = replyService.getForPrintReplies("article", id);
-
-		if (listUrl == null) {
+		
+		if ( listUrl == null ) {
 			listUrl = "/usr/article/list";
 		}
 
 		model.addAttribute("article", article);
 		model.addAttribute("replies", replies);
 		model.addAttribute("listUrl", listUrl);
+
+		
 
 		return "usr/article/detail";
 	}
