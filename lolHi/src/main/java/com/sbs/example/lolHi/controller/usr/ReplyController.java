@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.sbs.example.lolHi.dto.Article;
 import com.sbs.example.lolHi.dto.Reply;
 import com.sbs.example.lolHi.service.ReplyService;
 import com.sbs.example.lolHi.util.Util;
