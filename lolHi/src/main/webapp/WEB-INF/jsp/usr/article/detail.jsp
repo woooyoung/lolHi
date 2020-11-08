@@ -50,11 +50,11 @@
 	<div>작성자 : ${reply.extra.writer}</div>
 	<div>내용 : ${reply.body}</div>
 	<div>
-		<c:if test="${loginedMemberId == reply.memberId}">
+		<c:if test="${reply.extra.actorCanDelete}">
 			<a
 				href="/usr/reply/doDelete?id=${reply.id}&redirectUrl=${encodedCurrentUri}">삭제</a>
 		</c:if>
-		<c:if test="${loginedMemberId == reply.memberId}">
+		<c:if test="${reply.extra.actorCanModify}">
 			<a
 				href="/usr/reply/modify?id=${reply.id}&redirectUrl=${encodedCurrentUri}">수정</a>
 		</c:if>
