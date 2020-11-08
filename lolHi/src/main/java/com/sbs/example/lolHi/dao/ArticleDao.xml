@@ -75,6 +75,12 @@
 			</if>
 		</set>
 	</insert>
+	
+	<select id="getBoardByCode" resultType="Board">
+		SELECT *
+		FROM board
+		WHERE code = #{boardCode}
+	</select>
 
 	<resultMap type="Article" id="article">
 		<id property="id" column="id" />
@@ -82,6 +88,7 @@
 		<id property="updateDate" column="updateDate" />
 		<id property="title" column="title" />
 		<id property="body" column="body" />
+		<id property="boardId" column="boardId" />
 		<id property="memberId" column="memberId" />
 
 		<association property="extra" javaType="map">

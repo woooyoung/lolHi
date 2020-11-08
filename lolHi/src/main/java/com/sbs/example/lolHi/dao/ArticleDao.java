@@ -7,10 +7,10 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import com.sbs.example.lolHi.dto.Article;
+import com.sbs.example.lolHi.dto.Board;
 
 @Mapper
 public interface ArticleDao {
-
 	List<Article> getForPrintArticles(Map<String, Object> param);
 
 	Article getForPrintArticleById(@Param("id") int id);
@@ -23,4 +23,5 @@ public interface ArticleDao {
 
 	int getTotalCount(Map<String, Object> param);
 
+	Board getBoardByCode(@Param("boardCode") String boardCode);
 }
