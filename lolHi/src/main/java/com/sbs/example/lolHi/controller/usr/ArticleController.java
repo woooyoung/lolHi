@@ -62,7 +62,7 @@ public class ArticleController {
 		Member loginedMember = (Member) req.getAttribute("loginedMember");
 		Article article = articleService.getForPrintArticleById(loginedMember, id);
 		List<Reply> replies = replyService.getForPrintReplies("article", id);
-
+		
 		if (listUrl == null) {
 			listUrl = "/usr/article/list";
 		}
