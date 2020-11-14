@@ -1,5 +1,3 @@
-
-
 # 데이터 베이스 생성
 DROP DATABASE IF EXISTS lolHi;
 CREATE DATABASE lolHi;

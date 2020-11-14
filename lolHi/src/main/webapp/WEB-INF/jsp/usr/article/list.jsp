@@ -20,14 +20,11 @@
 
 <c:forEach items="${articles}" var="article">
 	<c:set var="detailUrl"
-		value="/usr/article/detail?id=${article.id}&listUrl=${encodedCurrentUri}" />
+		value="/usr/article-${board.code}/detail?id=${article.id}&listUrl=${encodedCurrentUri}" />
 	<div>
-		번호 :
-		<a href="${detailUrl}">${article.id}</a>
-		<br /> 작성날짜 : ${article.regDate} <br /> 작성자 :
-		${article.extra.writer} <br /> 갱신날짜 : ${article.updateDate} <br />
-		제목 :
-		<a href="${detailUrl}">${article.title}</a>
+		번호 : <a href="${detailUrl}">${article.id}</a> <br /> 작성날짜 :
+		${article.regDate} <br /> 작성자 : ${article.extra.writer} <br /> 갱신날짜
+		: ${article.updateDate} <br /> 제목 : <a href="${detailUrl}">${article.title}</a>
 		<br /> 작업 :
 		<c:if test="${article.extra.actorCanDelete}">
 			<a onclick="if ( confirm('삭제하시겠습니까?') == false ) return false;"
