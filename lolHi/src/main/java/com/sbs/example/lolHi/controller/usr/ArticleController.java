@@ -91,8 +91,8 @@ public class ArticleController {
 		return "usr/article/detail";
 	}
 
-	@RequestMapping("/usr/article/doDelete")
-	public String doDelete(HttpServletRequest req, int id, Model model) {
+	@RequestMapping("/usr/article-{boardCode}/doDelete")
+	public String doDelete(HttpServletRequest req, int id, Model model, @PathVariable("boardCode") String boardCode) {
 		Member loginedMember = (Member) req.getAttribute("loginedMember");
 
 		Article article = articleService.getForPrintArticleById(loginedMember, id);
@@ -106,12 +106,13 @@ public class ArticleController {
 		articleService.deleteArticleById(id);
 
 		model.addAttribute("msg", String.format("%d번 글을 삭제하였습니다.", id));
-		model.addAttribute("replaceUri", String.format("/usr/article-free/list"));
+		model.addAttribute("replaceUri", String.format("/usr/article-%s/list", boardCode));
 		return "common/redirect";
 	}
 
-	@RequestMapping("/usr/article/modify")
-	public String showModify(HttpServletRequest req, Model model, int id) {
+	@RequestMapping("/usr/article-{boardCode}/modify")
+	public String showModify(HttpServletRequest req, Model model, int id, @PathVariable("boardCode") String boardCode) {
+		Board board = articleService.getBoardByCode(boardCode);
 		Member loginedMember = (Member) req.getAttribute("loginedMember");
 
 		Article article = articleService.getForPrintArticleById(loginedMember, id);
@@ -122,14 +123,15 @@ public class ArticleController {
 			return "common/redirect";
 		}
 
+		model.addAttribute("board", board);
 		model.addAttribute("article", article);
 
 		return "usr/article/modify";
 	}
 
-	@RequestMapping("/usr/article/doModify")
-	public String doModify(HttpServletRequest req, int id, String title, String body, Model model) {
-
+	@RequestMapping("/usr/article-{boardCode}/doModify")
+	public String doModify(HttpServletRequest req, int id, String title, String body, Model model,
+			@PathVariable("boardCode") String boardCode) {
 		Member loginedMember = (Member) req.getAttribute("loginedMember");
 
 		Article article = articleService.getForPrintArticleById(loginedMember, id);
@@ -143,7 +145,7 @@ public class ArticleController {
 		articleService.modifyArticle(id, title, body);
 
 		model.addAttribute("msg", String.format("%d번 글을 수정하였습니다.", id));
-		model.addAttribute("replaceUri", String.format("/usr/article/detail?id=%d", id));
+		model.addAttribute("replaceUri", String.format("/usr/article-%s/detail?id=%d", boardCode, id));
 		return "common/redirect";
 	}
 
@@ -166,7 +168,7 @@ public class ArticleController {
 		int id = articleService.writeArticle(param);
 
 		model.addAttribute("msg", String.format("%d번 글이 생성되었습니다.", id));
-		model.addAttribute("replaceUri", String.format("/usr/article/detail?id=%d", id));
+		model.addAttribute("replaceUri", String.format("/usr/article-%s/detail?id=%d", boardCode, id));
 		return "common/redirect";
 	}
 }
