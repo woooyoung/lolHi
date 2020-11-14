@@ -41,7 +41,7 @@ public class ArticleController {
 		Member loginedMember = (Member) req.getAttribute("loginedMember");
 
 		param.put("boardId", board.getId());
-		
+
 		int totalCount = articleService.getTotalCount(param);
 		int itemsCountInAPage = 10;
 		int totalPage = (int) Math.ceil(totalCount / (double) itemsCountInAPage);
@@ -144,15 +144,19 @@ public class ArticleController {
 		return "common/redirect";
 	}
 
-	@RequestMapping("/usr/article/write")
+	@RequestMapping("/usr/article-{boardCode}/write")
 	public String showWrite(HttpServletRequest req, Model model) {
 		return "usr/article/write";
 	}
 
-	@RequestMapping("/usr/article/doWrite")
-	public String doWrite(HttpServletRequest req, @RequestParam Map<String, Object> param, Model model) {
+	@RequestMapping("/usr/article-{boardCode}/doWrite")
+	public String doWrite(HttpServletRequest req, @RequestParam Map<String, Object> param, Model model,
+			@PathVariable("boardCode") String boardCode) {
+		Board board = articleService.getBoardByCode(boardCode);
 		int loginedMemberId = (int) req.getAttribute("loginedMemberId");
 
+		
+		param.put("boardId", board.getId());
 		param.put("memberId", loginedMemberId);
 		int id = articleService.writeArticle(param);
 
