@@ -16,7 +16,7 @@ public class MemberService {
 
 	public int join(Map<String, Object> param) {
 		memberDao.join(param);
-		
+
 		int id = Util.getAsInt(param.get("id"));
 
 		return id;
@@ -24,11 +24,11 @@ public class MemberService {
 
 	public boolean isJoinAvailableLoginId(String loginId) {
 		Member member = memberDao.getMemberByLoginId(loginId);
-		
-		if ( member == null ) {
+
+		if (member == null) {
 			return true;
 		}
-		
+
 		return false;
 	}
 
@@ -42,6 +42,18 @@ public class MemberService {
 
 	public void modify(Map<String, Object> param) {
 		memberDao.modify(param);
+	}
+
+	public boolean isJoinAvailableNameAndEmail(String name, String email) {
+
+		if (name == null || name.length() == 0) {
+			return false;
+		}
+		if (email == null || email.length() == 0)
+			return false;
+
+		Member member = memberDao.getMemberByNameAndEmail(name, email);
+		return false;
 	}
 
 }

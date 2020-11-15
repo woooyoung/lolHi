@@ -70,6 +70,8 @@ public class MemberController {
 	@RequestMapping("/usr/member/doJoin")
 	public String doJoin(@RequestParam Map<String, Object> param, Model model) {
 		String loginId = Util.getAsStr(param.get("loginId"), "");
+		String name = Util.getAsStr(param.get("name"), "");
+		String email = Util.getAsStr(param.get("email"), "");
 
 		if (loginId.length() == 0) {
 			model.addAttribute("msg", String.format("로그인 아이디를 입력해주세요."));
@@ -85,29 +87,37 @@ public class MemberController {
 			return "common/redirect";
 		}
 
+		boolean isJoinAvailableNameAndEmail = memberService.isJoinAvailableNameAndEmail(name, email);
+
+		if (isJoinAvailableNameAndEmail == false) {
+			model.addAttribute("msg", String.format("이미 가입된 회원의 정보입니다."));
+			model.addAttribute("replaceUri", "/usr/member/findLoginId");
+			return "common/redirect";
+		}
+
 		int id = memberService.join(param);
 
 		model.addAttribute("msg", String.format("가입되었습니다."));
 		model.addAttribute("replaceUri", "/usr/article-free/list");
 		return "common/redirect";
 	}
-	
+
 	@RequestMapping("/usr/member/modify")
 	public String showModify() {
 		return "usr/member/modify";
 	}
-	
+
 	@RequestMapping("/usr/member/doModify")
 	public String doModify(Model model, HttpServletRequest req, @RequestParam Map<String, Object> param) {
-		int loginedMemberId = (int)req.getAttribute("loginedMemberId");
+		int loginedMemberId = (int) req.getAttribute("loginedMemberId");
 		param.put("id", loginedMemberId);
-		
+
 		// 해킹방지
 		param.remove("loginId");
 		param.remove("loginPw");
-		
+
 		memberService.modify(param);
-		
+
 		model.addAttribute("msg", String.format("수정되었습니다."));
 		model.addAttribute("replaceUri", "/usr/article-free/list");
 		return "common/redirect";
