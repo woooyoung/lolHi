@@ -1,19 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:set var="title" value="회원 로그인 아이디 찾" />
+<c:set var="title" value="회원 로그인 비번 찾기" />
 <%@ include file="../part/head.jspf"%>
 <script>
-	var findLoginIdFormSubmitDone = false;
-	function findLoginIdFormSubmit(form) {
-		if (findLoginIdFormSubmitDone) {
+	var findLoginPwFormSubmitDone = false;
+	function findLoginPwFormSubmit(form) {
+		if (findLoginPwFormSubmitDone) {
 			alert('처리중입니다.');
 			return;
 		}
-		form.name.value = form.name.value.trim();
-		if (form.name.value.length == 0) {
-			alert('이름을 입력해주세요.');
-			form.name.focus();
+		form.loginId.value = form.loginId.value.trim();
+		if (form.loginId.value.length == 0) {
+			alert('로그인 아이디를 입력해주세요.');
+			form.loginId.focus();
 			return;
 		}
 		form.email.value = form.email.value.trim();
@@ -23,14 +23,14 @@
 			return;
 		}
 		form.submit();
-		findLoginIdFormSubmitDone = true;
+		findLoginPwFormSubmitDone = true;
 	}
 </script>
-<form action="doFindLoginId" method="POST"
-	onsubmit="findLoginIdFormSubmit(this); return false;">
+<form action="doFindLoginPw" method="POST"
+	onsubmit="findLoginPwFormSubmit(this); return false;">
 	<div>
-		이름 : <input type="text" maxlength="30"
-			placeholder="이름을 입력해주세요." name="name" />
+		로그인 아이디 : <input type="text" maxlength="30"
+			placeholder="이름을 입력해주세요." name="loginId" />
 	</div>
 	<div>
 		이메일 : <input type="email" maxlength="50"
