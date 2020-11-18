@@ -24,7 +24,7 @@ public class MemberService {
 
 	@Value("${custom.siteLoginUri}")
 	private String siteLoginUri;
-	
+
 	@Autowired
 	private MemberDao memberDao;
 
@@ -109,12 +109,11 @@ public class MemberService {
 		}
 
 		Map<String, Object> modifyParam = new HashMap<>();
-		modifyParam.put("loginPw", tempLoginPw);
+		modifyParam.put("loginPw", Util.sha256(tempLoginPw));
 		modifyParam.put("id", member.getId());
 		memberDao.modify(modifyParam);
-		
-		
-		return new ResultData("S-1","임시 패스워드를 메일로 발송했습니다.");
+
+		return new ResultData("S-1", "임시 패스워드를 메일로 발송했습니다.");
 	}
 
 }
