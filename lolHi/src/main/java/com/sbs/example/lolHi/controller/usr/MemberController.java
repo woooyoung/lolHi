@@ -21,6 +21,36 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 
+	@RequestMapping("/usr/member/checkLoginPw")
+	public String showCheckLoginPw() {
+		return "usr/member/checkLoginPw";
+	}
+
+	@RequestMapping("/usr/member/doCheckLoginPw")
+	public String doCheckLoginPw(Model model, HttpServletRequest req, String loginPw, String redirectUrl) {
+		Member loginedMember = (Member) req.getAttribute("loginedMember");
+
+		if (loginedMember.getLoginPw().equals(loginPw) == false) {
+			model.addAttribute("historyBack", true);
+			model.addAttribute("msg", "비밀번호가 일치하지 않습니다.");
+			return "common/redirect";
+		}
+
+		// String authCode =
+		// memberService.genCheckPasswordAuthCode(loginedMember.getId());
+
+		if (redirectUrl == null || redirectUrl.length() == 0) {
+			redirectUrl = "/usr/home/main";
+		}
+
+		// redirectUri = Util.getNewUri(redirectUri, "checkPasswordAuthCode", authCode);
+
+		model.addAttribute("replaceUri", redirectUrl);
+
+		return "common/redirect";
+
+	}
+
 	@RequestMapping("/usr/member/findLoginId")
 	public String showfindLoginId() {
 		return "usr/member/findLoginId";
@@ -62,9 +92,9 @@ public class MemberController {
 			model.addAttribute("historyBack", true);
 			return "common/redirect";
 		}
-		
+
 		ResultData setTempPasswordAndNotifyRsData = memberService.setTempPasswordAndNotify(member);
-		
+
 		model.addAttribute("msg", String.format(setTempPasswordAndNotifyRsData.getMsg()));
 		model.addAttribute("historyBack", true);
 		return "common/redirect";
