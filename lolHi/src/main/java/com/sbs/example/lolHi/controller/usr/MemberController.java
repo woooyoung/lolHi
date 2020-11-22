@@ -37,7 +37,7 @@ public class MemberController {
 		}
 
 		String authCode = memberService.genCheckLoginPwAuthCode(loginedMember.getId());
-		
+
 		if (redirectUrl == null || redirectUrl.length() == 0) {
 			redirectUrl = "/usr/home/main";
 		}
