@@ -3,7 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="title" value="회원 로그인" />
 <%@ include file="../part/head.jspf"%>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+
 <script>
 	var loginFormSubmitDone = false;
 	function loginFormSubmit(form) {
@@ -23,27 +25,45 @@
 			form.loginPw.focus();
 			return;
 		}
-
-		alert(form.loginPw.value);
 		form.loginPw.value = sha256(form.loginPw.value);
-		alert(form.loginPw.value);
-		
 		form.submit();
 		loginFormSubmitDone = true;
 	}
 </script>
-<form action="doLogin" method="POST"
-	onsubmit="loginFormSubmit(this); return false;">
-	<div>
-		로그인 아이디 : <input type="text" maxlength="30"
-			placeholder="로그인 아이디를 입력해주세요." name="loginId" />
+
+<div class="login-box con-min-width">
+	<div class="con">
+		<form class="form-box-type-1" action="doLogin" method="POST"
+			onsubmit="loginFormSubmit(this); return false;">
+			<div>
+				<div>
+					<span>로그인 아이디</span>
+				</div>
+				<div>
+					<input type="text" maxlength="30" placeholder="로그인 아이디를 입력해주세요."
+						name="loginId" />
+				</div>
+			</div>
+			<div>
+				<div>
+					<span>로그인 비번</span>
+				</div>
+				<div>
+					<input type="password" maxlength="30" placeholder="로그인 비번을 입력해주세요."
+					name="loginPw" />
+				</div>
+			</div>
+			<div>
+				<div>
+					<span>
+						로그인
+					</span>
+				</div>
+				<div>
+					<input type="submit" value="로그인" />
+				</div>
+			</div>
+		</form>
 	</div>
-	<div>
-		로그인 비번 : <input type="password" maxlength="30"
-			placeholder="로그인 비번을 입력해주세요." name="loginPw" />
-	</div>
-	<div>
-		로그인 : <input type="submit" value="로그인" />
-	</div>
-</form>
+</div>
 <%@ include file="../part/foot.jspf"%>

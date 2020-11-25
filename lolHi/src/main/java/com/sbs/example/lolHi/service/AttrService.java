@@ -25,6 +25,10 @@ public class AttrService {
 		return attrDao.get(relTypeCode, relId, typeCode, type2Code);
 	}
 
+	public int setValue(String name, String value) {
+		return setValue(name, value, null);
+	}
+	
 	public int setValue(String name, String value, String expireDate) {
 		String[] nameBits = name.split("__");
 		String relTypeCode = nameBits[0];
@@ -47,11 +51,11 @@ public class AttrService {
 
 	public String getValue(String relTypeCode, int relId, String typeCode, String type2Code) {
 		String value = attrDao.getValue(relTypeCode, relId, typeCode, type2Code);
-
-		if (value == null) {
+		
+		if ( value == null ) {
 			return "";
 		}
-
+		
 		return value;
 	}
 
@@ -69,15 +73,7 @@ public class AttrService {
 		return attrDao.remove(relTypeCode, relId, typeCode, type2Code);
 	}
 
-	public int setValue(String relTypeCode, int relId, String typeCode, String type2Code, String value,
-			String expireDate) {
-		System.out.println("relTypeCode : " + relTypeCode);
-		System.out.println("relId : " + relId);
-		System.out.println("typeCode : " + typeCode);
-		System.out.println("type2Code : " + type2Code);
-		System.out.println("value : " + value);
-		System.out.println("expireDate : " + expireDate);
-
+	public int setValue(String relTypeCode, int relId, String typeCode, String type2Code, String value, String expireDate) {
 		attrDao.setValue(relTypeCode, relId, typeCode, type2Code, value, expireDate);
 		Attr attr = get(relTypeCode, relId, typeCode, type2Code);
 

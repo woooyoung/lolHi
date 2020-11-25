@@ -26,6 +26,37 @@ public class MemberController {
 		return "usr/member/checkLoginPw";
 	}
 
+	@RequestMapping("/usr/member/doAuthEmail")
+	public String doAuthEmail(Model model, int actorId, String email, String authCode) {
+		Member member = memberService.getMemberById(actorId);
+
+		if (member == null) {
+			model.addAttribute("historyBack", true);
+			model.addAttribute("msg", "존재하지 않는 회원입니다.");
+			return "common/redirect";
+		}
+
+		if (member.getEmail().equals(email) == false) {
+			model.addAttribute("historyBack", true);
+			model.addAttribute("msg", "이메일이 일치하지 않습니다.");
+			return "common/redirect";
+		}
+
+		String emailAuthCodeOnDb = memberService.getEmailAuthCode(actorId);
+
+		if (authCode.equals(emailAuthCodeOnDb) == false) {
+			model.addAttribute("historyBack", true);
+			model.addAttribute("msg", "인증코드가 일치하지 않거나 만료되었습니다. 관리자에게 문의해주세요.");
+			return "common/redirect";
+		}
+
+		memberService.saveAuthedEmail(actorId, email);
+
+		model.addAttribute("msg", "이메일 인증에 성공하였습니다.");
+		model.addAttribute("replaceUri", "/");
+		return "common/redirect";
+	}
+
 	@RequestMapping("/usr/member/doCheckLoginPw")
 	public String doCheckLoginPw(Model model, HttpServletRequest req, String loginPw, String redirectUrl) {
 		Member loginedMember = (Member) req.getAttribute("loginedMember");
@@ -43,6 +74,7 @@ public class MemberController {
 		}
 
 		redirectUrl = Util.getNewUri(redirectUrl, "checkLoginPwAuthCode", authCode);
+
 		model.addAttribute("replaceUri", redirectUrl);
 
 		return "common/redirect";
@@ -50,43 +82,42 @@ public class MemberController {
 	}
 
 	@RequestMapping("/usr/member/findLoginId")
-	public String showfindLoginId() {
+	public String showFindLoginId() {
 		return "usr/member/findLoginId";
 	}
 
 	@RequestMapping("/usr/member/doFindLoginId")
 	public String doFindLoginId(Model model, String name, String email) {
-
 		Member member = memberService.getMemberByNameAndEmail(name, email);
 
 		if (member == null) {
-			model.addAttribute("msg", String.format("해당 회원은 존재하지 않습니다."));
+			model.addAttribute("msg", String.format("해당회원은 존재하지 않습니다."));
 			model.addAttribute("historyBack", true);
 			return "common/redirect";
 		}
-		model.addAttribute("msg", String.format("가입 날짜 : %s,로그인 아이디 : %s", member.getRegDate(), member.getLoginId()));
+
+		model.addAttribute("msg", String.format("가입날짜 : %s, 로그인아이디 : %s", member.getRegDate(), member.getLoginId()));
 		model.addAttribute("historyBack", true);
 		return "common/redirect";
 	}
 
 	@RequestMapping("/usr/member/findLoginPw")
-	public String showfindLoginPw() {
+	public String showFindLoginPw() {
 		return "usr/member/findLoginPw";
 	}
 
 	@RequestMapping("/usr/member/doFindLoginPw")
 	public String doFindLoginPw(Model model, String loginId, String email) {
-
 		Member member = memberService.getMemberByLoginId(loginId);
 
 		if (member == null) {
-			model.addAttribute("msg", String.format("해당 회원은 존재하지 않습니다."));
+			model.addAttribute("msg", String.format("해당회원은 존재하지 않습니다."));
 			model.addAttribute("historyBack", true);
 			return "common/redirect";
 		}
 
 		if (member.getEmail().equals(email) == false) {
-			model.addAttribute("msg", String.format("해당 회원은 존재하지 않습니다."));
+			model.addAttribute("msg", String.format("해당회원은 존재하지 않습니다."));
 			model.addAttribute("historyBack", true);
 			return "common/redirect";
 		}
@@ -121,6 +152,14 @@ public class MemberController {
 
 		if (member.getLoginPw().equals(loginPw) == false) {
 			model.addAttribute("msg", String.format("비밀번호를 정확히 입력해주세요."));
+			model.addAttribute("historyBack", true);
+			return "common/redirect";
+		}
+
+		String authedEmail = memberService.getAuthedEmail(member.getId());
+
+		if (authedEmail.equals(member.getEmail()) == false) {
+			model.addAttribute("msg", String.format("이메일 인증 후 시도해주세요."));
 			model.addAttribute("historyBack", true);
 			return "common/redirect";
 		}
@@ -199,6 +238,7 @@ public class MemberController {
 			model.addAttribute("msg", checkValidCheckPasswordAuthCodeResultData.getMsg());
 			return "common/redirect";
 		}
+
 		return "usr/member/modify";
 	}
 
