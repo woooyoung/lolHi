@@ -12,6 +12,11 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+
 /* 라이브러리 */
 .con {
 	margin-left: auto;
@@ -66,6 +71,11 @@ a {
 .bg-red {
 	background-color: red;
 }
+
+.margin-top-30px {
+	margin-top: 30px;
+}
+
 /* 커스텀 */
 html {
 	font-family: 'Roboto', 'Noto Sans KR', sans-serif;
@@ -181,3 +191,106 @@ html {
 	min-height: 300px;
 }
 /* 폼 박스 타입 1 끝 */
+
+/* 게시물 리스트 시작 */
+.article-list-box {
+	margin-top: 30px;
+}
+
+.article-list-box__row {
+	display: flex;
+}
+
+.article-list-box__row>:nth-child(1) {
+	width: 50px;
+}
+
+.article-list-box__row>:nth-child(2), .article-list-box__row>:nth-child(3)
+	{
+	width: 180px;
+}
+
+.article-list-box__row>:nth-child(4) {
+	width: 180px;
+}
+
+.article-list-box__row>:nth-child(5) {
+	flex: 1 0 0;
+}
+
+.article-list-box__row>:nth-child(5)>a {
+	display: block;
+}
+
+.article-list-box__row>:nth-child(6) {
+	width: 180px;
+}
+
+.article-list-box__head .article-list-box__row>div>span {
+	font-weight: bold;
+}
+
+.article-list-box__body .article-list-box__row {
+	margin-top: 5px;
+}
+/* 게시물 리스트 끝 */
+
+/* 게시물 페이지 시작 */
+.article-page-box {
+	text-align: center;
+}
+
+.article-page-box__page-btn--selected {
+	color: red;
+}
+/* 게시물 페이지 끝 */
+
+/* 게시물 상세박스 시작 */
+.article-detail-box>div>div {
+	display: flex;
+	margin-top: 10px;
+}
+
+.article-detail-box>div>div>div:first-child {
+	width: 150px;
+}
+
+.article-detail-box>div>div>div:first-child>span {
+	font-weight: bold;
+}
+/* 게시물 상세박스 끝 */
+
+/* 게시물 댓글 리스트 시작 */
+.article-reply-list-box {
+	margin-top: 10px;
+}
+
+.article-reply-list-box__row {
+	display: flex;
+}
+
+.article-reply-list-box__row>:nth-child(1) {
+	width: 50px;
+}
+
+.article-reply-list-box__row>:nth-child(2), .article-reply-list-box__row>:nth-child(3)
+	{
+	width: 180px;
+}
+
+.article-reply-list-box__row>:nth-child(4) {
+	flex: 1 0 0;
+}
+
+.article-reply-list-box__row>:nth-child(5) {
+	width: 180px;
+}
+
+.article-reply-list-box__head .article-reply-list-box__row>div>span {
+	font-weight: bold;
+}
+
+.article-reply-list-box__body .article-reply-list-box__row {
+	margin-top: 5px;
+}
+/* 게시물 댓글 리스트 끝 */
